@@ -128,7 +128,8 @@ li:nth-child(4), li:nth-child(7) { --group-join: 0; }
 
 ## 一番のおすすめ
 
-![bg right:38% fit](02.png)
+![bg right:38% vertical fit](02.png)
+![bg fit](03.jpg)
 
 ### 『最後の時間旅行』
 
