@@ -122,6 +122,112 @@ section[data-marpit-pagination]::after {
   text-align: center;
 }
 
+/* ---------- 年表（<!-- _class: timeline -->） ----------
+ * 番号付きリストを左→右に流れる年表として表示する。
+ * 各項目は「画像 / 年 / タイトル」の3行で書く:
+ *   1. ![](a.png)
+ *      **2007**
+ *      タイトル
+ * 画像のない項目は 🎬 のプレースホルダが出る。最後の項目は強調色になる。
+ */
+
+section.timeline ol {
+  --img-h: 150px;
+  --line-y: calc(var(--img-h) + 27px);
+
+  position: relative;
+  display: flex;
+  gap: 12px;
+  margin: 1.2em 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.timeline ol::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: var(--line-y);
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--line), var(--accent));
+}
+
+section.timeline ol::after {
+  content: '';
+  position: absolute;
+  right: -14px;
+  top: var(--line-y);
+  margin-top: -11px;
+  border: 11px solid transparent;
+  border-left: 16px solid var(--accent);
+  border-right: none;
+}
+
+section.timeline li {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  font-size: 0.56em;
+  line-height: 1.35;
+  text-align: center;
+  font-weight: 700;
+}
+
+section.timeline li img {
+  display: block;
+  width: 100%;
+  height: var(--img-h);
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+  margin-bottom: 14px;
+}
+
+/* 画像直後の改行は不要（年のバッジを線の上にそろえるため） */
+section.timeline li img + br {
+  display: none;
+}
+
+section.timeline li:not(:has(img))::before {
+  content: '🎬';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: var(--img-h);
+  margin-bottom: 14px;
+  border: 3px dashed var(--line);
+  border-radius: 10px;
+  background: #fff;
+  font-size: 56px;
+}
+
+/* 年の部分（2行目）: リストの改行で <br> が入るので、strong で囲む */
+section.timeline li strong {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+}
+
+section.timeline li:last-child strong {
+  background: var(--highlight);
+}
+
+section.timeline li:last-child img {
+  object-position: left center;
+  outline: 4px solid var(--highlight);
+  outline-offset: 2px;
+}
+
 /* ---------- タイトルスライド（<!-- _class: lead -->） ---------- */
 
 section.lead {
