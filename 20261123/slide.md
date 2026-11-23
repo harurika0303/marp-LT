@@ -23,8 +23,6 @@ header: 'レイトン教授シリーズのすすめ'
   - Switch 2 / Switch / PS5 / Steam
 - 本編は **約13年ぶり**
 
-⇒ シリーズをおさらい
-
 ---
 
 <!-- _class: timeline -->
