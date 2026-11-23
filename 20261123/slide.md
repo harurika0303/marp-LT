@@ -89,7 +89,8 @@ li:nth-child(3), li:nth-child(7) { --group-join: 0; }
 1. ![](t_utahime_card.jpg)
    **2**
    永遠の歌姫
-   映画も本編の一部
+   （映画）
+   一部本編に関係
 1. ![](t_kiseki.png)
    **3**
    ⑤ 奇跡の仮面
