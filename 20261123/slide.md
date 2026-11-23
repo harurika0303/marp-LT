@@ -29,12 +29,13 @@ header: 'レイトン教授シリーズのすすめ'
 <!-- _footer: '©LEVEL-5 Inc.' -->
 
 <style scoped>
+ol { --img-h: 139px; }
 li:nth-child(-n+3) { --group-color: var(--accent); }
 li:nth-child(1) { --group-label: '第1シーズン：1作ごとに完結'; }
-li:nth-child(n+4):nth-child(-n+7) { --group-color: var(--accent-dark); }
+li:nth-child(n+4):nth-child(-n+6) { --group-color: var(--accent-dark); }
 li:nth-child(4) { --group-label: '第2シーズン：裏に大きな話が続く'; }
-li:nth-child(8) { --group-color: var(--highlight); --group-label: '新作'; }
-li:nth-child(3), li:nth-child(7) { --group-join: 0; }
+li:nth-child(7) { --group-color: var(--highlight); --group-label: '新作'; }
+li:nth-child(3), li:nth-child(6) { --group-join: 0; }
 </style>
 
 ## 発売順
@@ -55,10 +56,6 @@ li:nth-child(3), li:nth-child(7) { --group-join: 0; }
    **2009**
    ④ 魔神の笛
    `DS`
-1. ![](t_utahime_card.jpg)
-   **2009**
-   永遠の歌姫
-   （映画）
 1. ![](t_kiseki.png)
    **2011**
    ⑤ 奇跡の仮面
@@ -75,18 +72,21 @@ li:nth-child(3), li:nth-child(7) { --group-join: 0; }
 
 **⇒ 本編は約13年ぶり！**
 
+> ※ 本編のほかに、映画・アニメ・小説などのメディアミックスや、外伝（『VS逆転裁判』『ミステリージャーニー』など）もある
+
 ---
 
 <!-- _class: timeline -->
 <!-- _footer: '©LEVEL-5 Inc.' -->
 
 <style scoped>
-li:nth-child(-n+4) { --group-color: var(--accent-dark); }
+ol { --img-h: 139px; }
+li:nth-child(-n+3) { --group-color: var(--accent-dark); }
 li:nth-child(1) { --group-label: '第2シーズン：裏に大きな話が続く'; }
-li:nth-child(n+5):nth-child(-n+7) { --group-color: var(--accent); }
-li:nth-child(5) { --group-label: '第1シーズン：1作ごとに完結'; }
-li:nth-child(8) { --group-color: var(--highlight); --group-label: '新作'; }
-li:nth-child(4), li:nth-child(7) { --group-join: 0; }
+li:nth-child(n+4):nth-child(-n+6) { --group-color: var(--accent); }
+li:nth-child(4) { --group-label: '第1シーズン：1作ごとに完結'; }
+li:nth-child(7) { --group-color: var(--highlight); --group-label: '新作'; }
+li:nth-child(3), li:nth-child(6) { --group-join: 0; }
 </style>
 
 ## 時系列順だとこうなる
@@ -95,28 +95,23 @@ li:nth-child(4), li:nth-child(7) { --group-join: 0; }
    **1**
    ④ 魔神の笛
    ルークと出会う
-1. ![](t_utahime_card.jpg)
-   **2**
-   永遠の歌姫
-   （映画）
-   一部本編に関係
 1. ![](t_kiseki.png)
-   **3**
+   **2**
    ⑤ 奇跡の仮面
 1. ![](t_choubunmei.png)
-   **4**
+   **3**
    ⑥ 超文明Aの遺産
 1. ![](t_fushigi.png)
-   **5**
+   **4**
    ① 不思議な町
 1. ![](t_akuma.png)
-   **6**
+   **5**
    ② 悪魔の箱
 1. ![](t_jikan.png)
-   **7**
+   **6**
    ③ 最後の時間旅行
 1. ![](t_jouki.png)
-   **8**
+   **7**
    ⑦ 蒸気の新世界
    ③の1年後
 
