@@ -131,13 +131,19 @@ section[data-marpit-pagination]::after {
  * 画像のない項目は 🎬 のプレースホルダが出る。最後の項目は強調色になる。
  */
 
+section.timeline {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 section.timeline ol {
-  --img-h: 150px;
+  /* 画像は 235×220（最後の項目だけ 373×220）。見切れないよう幅との比に合わせた高さ */
+  --img-h: 122px;
   --line-y: calc(var(--img-h) + 27px);
 
   position: relative;
   display: flex;
-  gap: 12px;
+  gap: 8px;
   margin: 1.2em 0 1em;
   padding: 0;
   list-style: none;
@@ -220,6 +226,11 @@ section.timeline li strong {
 
 section.timeline li:last-child strong {
   background: var(--highlight);
+}
+
+/* 最後の項目（新作など）は横長画像用に幅を広げる */
+section.timeline li:last-child {
+  flex-grow: 1.6;
 }
 
 section.timeline li:last-child img {
