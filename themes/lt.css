@@ -281,6 +281,67 @@ section.timeline li:last-child img {
   outline-offset: 2px;
 }
 
+/* ---------- お礼・感想スライド（<!-- _class: thanks -->） ----------
+ * 見出し（# ご清聴ありがとうございました）の周りに、
+ * 箇条書きを付箋のように少し傾けて散らして表示する。最後の項目は強調色。
+ */
+
+section.thanks {
+  text-align: center;
+  justify-content: center;
+}
+
+section.thanks h1 {
+  margin: 0 0 0.6em;
+  font-size: 1.7em;
+}
+
+section.thanks ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+section.thanks li {
+  margin: 0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #fff8d6;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  font-size: 0.72em;
+  font-weight: 700;
+  transform: rotate(-2deg);
+}
+
+section.thanks li:nth-child(3n + 2) {
+  background: #e3f1fb;
+  transform: rotate(1.5deg);
+}
+
+section.thanks li:nth-child(3n) {
+  background: #fde4dd;
+  transform: rotate(-1deg);
+}
+
+section.thanks li:nth-child(4n) {
+  transform: rotate(2.5deg);
+}
+
+section.thanks li:last-child {
+  background: var(--highlight);
+  color: #fff;
+  font-size: 0.85em;
+  transform: rotate(-1.5deg);
+}
+
+section.thanks li:last-child strong {
+  color: #fff;
+}
+
 /* ---------- タイトルスライド（<!-- _class: lead -->） ---------- */
 
 section.lead {
