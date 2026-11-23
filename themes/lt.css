@@ -129,6 +129,14 @@ section[data-marpit-pagination]::after {
  *      **2007**
  *      タイトル
  * 画像のない項目は 🎬 のプレースホルダが出る。最後の項目は強調色になる。
+ *
+ * 補足（対応ハードなど）は `DS / スマホ` のようにコードで書くと小さい灰色文字になる。
+ *
+ * 区分け（シーズンなど）は、スライド内の <style scoped> で li に変数を設定すると
+ * 画像の上に色付きの線とラベルが出る:
+ *   li:nth-child(-n+3) { --group-color: var(--accent); }
+ *   li:nth-child(1)    { --group-label: '第1シーズン'; }
+ *   li:nth-child(3)    { --group-join: 0; }  ← グループの最後（次の線と離す）
  */
 
 section.timeline {
@@ -144,7 +152,7 @@ section.timeline ol {
   position: relative;
   display: flex;
   gap: 8px;
-  margin: 1.2em 0 1em;
+  margin: 1.8em 0 1em;
   padding: 0;
   list-style: none;
 }
@@ -226,6 +234,40 @@ section.timeline li strong {
 
 section.timeline li:last-child strong {
   background: var(--highlight);
+}
+
+/* 補足（対応ハードなど） */
+section.timeline li code {
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 0.95em;
+  font-weight: 700;
+}
+
+/* 区分け（シーズンなど）: 画像の上の線とラベル */
+section.timeline li {
+  --group-color: transparent;
+  --group-label: '';
+}
+
+section.timeline li::after {
+  content: var(--group-label);
+  position: absolute;
+  left: 0;
+  right: var(--group-join, -8px); /* ol の gap 分つなげる。区切りの項目は --group-join: 0 */
+  top: -36px;
+  height: 22px;
+  border-bottom: 5px solid var(--group-color);
+  color: var(--group-color);
+  font-size: 0.95em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+section.timeline li:last-child::after {
+  right: 0;
 }
 
 /* 最後の項目（新作など）は横長画像用に幅を広げる */
