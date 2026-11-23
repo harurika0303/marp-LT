@@ -1,12 +1,8 @@
 ---
 marp: true
-theme: default
+theme: lt
 paginate: true
 header: 'プラネタリウムについて'
-style: |
-    section.title * , h1{
-        text-align: center;
-    }
 ---
 
 <!-- _class: lead -->

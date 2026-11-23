@@ -1,12 +1,8 @@
 ---
 marp: true
-theme: default
+theme: lt
 paginate: true
 header: '地元姫路について①'
-style: |
-    section.title * , h1{
-        text-align: center;
-    }
 ---
 
 <!-- _class: lead -->

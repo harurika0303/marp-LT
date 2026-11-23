@@ -1,12 +1,8 @@
 ---
 marp: true
-theme: default
+theme: lt
 paginate: true
 header: 'なんだかんだ続いている習慣'
-style: |
-    section.title * , h1{
-        text-align: center;
-    }
 ---
 
 <!-- _class: lead -->

@@ -1,12 +1,8 @@
 ---
 marp: true
-theme: default
+theme: lt
 paginate: true
 header: 'お掃除作業系ゲーム'
-style: |
-    section.title * , h1{
-        text-align: center;
-    }
 ---
 
 <!-- _class: lead -->

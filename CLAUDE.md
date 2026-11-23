@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-LT会用のMarpスライド置き場。ビルド設定やpackage.jsonは無く、Markdownと画像だけのリポジトリ。
+LT会用のMarpスライド置き場。package.jsonは無く、Markdown・画像・共通テーマCSSだけのリポジトリ。
 
 ## ディレクトリ構成
 
@@ -8,6 +8,13 @@ LT会用のMarpスライド置き場。ビルド設定やpackage.jsonは無く�
 - フォルダ内に `slide.md`（本体）、使用する画像、エクスポートした `slide.pdf` を置く
 - 画像はフォルダ直下に置き、`slide.md` から相対パス（`![alt text](01.png)` など）で参照する
 - 例外: `20251223/` は本体が `copilot-instructions.md` という名前になっている（触る必要がなければそのままにする）
+- `themes/lt.css`: 全スライド共通のテーマ。`.marprc.yml`（Marp CLI用）と `.vscode/settings.json`（VS Code用）で読み込んでいる
+
+## デザイン（共通テーマ）
+
+- デザインは全スライドで `theme: lt` に統一する。デザインを変えるときは **`themes/lt.css` を直す**（スライドごとの `style:` で見た目を作らない）
+- 色は `lt.css` 冒頭の `section` の CSS変数（`--accent` など）で管理している
+- テーマを変えたら、過去スライドも含めて表示が崩れていないかレンダリングして確認する
 
 ## スライドの書式
 
@@ -16,13 +23,9 @@ LT会用のMarpスライド置き場。ビルド設定やpackage.jsonは無く�
 ```markdown
 ---
 marp: true
-theme: default
+theme: lt
 paginate: true
 header: 'タイトル'
-style: |
-    section.title * , h1{
-        text-align: center;
-    }
 ---
 
 <!-- _class: lead -->
@@ -52,10 +55,11 @@ style: |
 
 - **新しいスライドの作成**: テーマを受けて `YYYYMMDD/slide.md` を上記書式で作る。日付が分からなければ確認する。画像はユーザーが用意するので、必要な箇所にはプレースホルダ（ファイル名と何の画像が欲しいか）を置いて伝える
 - **推敲・校正**: 誤字脱字、言い回し、構成の改善。口語でくだけたトーン（「〜してみた」「めちゃくちゃかっこいい」など）は本人の味なので、硬い文章に書き換えない。事実関係（数字・固有名詞）が怪しければ指摘する
-- **PDF出力**: 普段はユーザーが VS Code の Marp 拡張でエクスポートしている。Claude が出力する場合は Marp CLI を使う（ローカル画像を読むため `--allow-local-files` が必要）
+- **画像**: ネットから取ってくる場合は公式サイトなど出どころのはっきりした画像にし、ダウンロード前にURL・サイズをユーザーに確認する。スライドには `<!-- _footer: '©権利者' -->` で権利表記を入れる
+- **PDF出力**: 普段はユーザーが VS Code の Marp 拡張でエクスポートしている。Claude が出力する場合はリポジトリ直下で Marp CLI を使う（`.marprc.yml` がテーマとローカル画像の読み込みを設定済み）
 
   ```powershell
-  npx @marp-team/marp-cli@latest YYYYMMDD/slide.md --pdf --allow-local-files -o YYYYMMDD/slide.pdf
+  npx @marp-team/marp-cli@latest YYYYMMDD/slide.md --pdf -o YYYYMMDD/slide.pdf
   ```
 
 ## コミット規則
