@@ -30,20 +30,33 @@ header: 'レイトン教授シリーズのすすめ'
 <!-- _class: timeline -->
 <!-- _footer: '©LEVEL-5 Inc.' -->
 
+<style scoped>
+li:nth-child(-n+3) { --group-color: var(--accent); }
+li:nth-child(1) { --group-label: '第1シーズン'; }
+li:nth-child(n+4):nth-child(-n+7) { --group-color: var(--accent-dark); }
+li:nth-child(4) { --group-label: '第2シーズン'; }
+li:nth-child(8) { --group-color: var(--highlight); --group-label: '新作'; }
+li:nth-child(3), li:nth-child(7) { --group-join: 0; }
+</style>
+
 ## 発売順
 
 1. ![](t_fushigi.png)
    **2007**
    ① 不思議な町
+   `DS / スマホ`
 1. ![](t_akuma.png)
    **2007**
    ② 悪魔の箱
+   `DS / スマホ`
 1. ![](t_jikan.png)
    **2008**
    ③ 最後の時間旅行
+   `DS / スマホ`
 1. ![](t_majin.png)
    **2009**
    ④ 魔神の笛
+   `DS`
 1. ![](t_utahime_card.jpg)
    **2009**
    永遠の歌姫
@@ -51,12 +64,16 @@ header: 'レイトン教授シリーズのすすめ'
 1. ![](t_kiseki.png)
    **2011**
    ⑤ 奇跡の仮面
+   `3DS`
 1. ![](t_choubunmei.png)
    **2013**
    ⑥ 超文明Aの遺産
+   `3DS`
 1. ![](t_jouki.png)
    **2026**
    ⑦ 蒸気の新世界
+   `Switch 2 / Switch`
+   `PS5 / Steam`
 
 **⇒ 本編は約13年ぶり！**
 
