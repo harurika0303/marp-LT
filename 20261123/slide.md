@@ -18,6 +18,7 @@ header: 'レイトン教授シリーズのすすめ'
 
 ![bg right:45% fit](01.png)
 
+- ナゾを解きながら事件を追うADV
 - 『蒸気の新世界』
   - **2026/12/10 発売**
   - Switch 2 / Switch / PS5 / Steam
@@ -30,9 +31,9 @@ header: 'レイトン教授シリーズのすすめ'
 
 <style scoped>
 li:nth-child(-n+3) { --group-color: var(--accent); }
-li:nth-child(1) { --group-label: '第1シーズン'; }
+li:nth-child(1) { --group-label: '第1シーズン：1作ごとに完結'; }
 li:nth-child(n+4):nth-child(-n+7) { --group-color: var(--accent-dark); }
-li:nth-child(4) { --group-label: '第2シーズン'; }
+li:nth-child(4) { --group-label: '第2シーズン：裏に大きな話が続く'; }
 li:nth-child(8) { --group-color: var(--highlight); --group-label: '新作'; }
 li:nth-child(3), li:nth-child(7) { --group-join: 0; }
 </style>
@@ -79,6 +80,15 @@ li:nth-child(3), li:nth-child(7) { --group-join: 0; }
 
 <!-- _class: timeline -->
 <!-- _footer: '©LEVEL-5 Inc.' -->
+
+<style scoped>
+li:nth-child(-n+4) { --group-color: var(--accent-dark); }
+li:nth-child(1) { --group-label: '第2シーズン：裏に大きな話が続く'; }
+li:nth-child(n+5):nth-child(-n+7) { --group-color: var(--accent); }
+li:nth-child(5) { --group-label: '第1シーズン：1作ごとに完結'; }
+li:nth-child(8) { --group-color: var(--highlight); --group-label: '新作'; }
+li:nth-child(4), li:nth-child(7) { --group-join: 0; }
+</style>
 
 ## 時系列順だとこうなる
 
