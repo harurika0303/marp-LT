@@ -74,6 +74,20 @@ section a {
   color: var(--accent);
 }
 
+/* 補足・注釈: `> ※ ...` で小さめの灰色文字 */
+section blockquote {
+  margin: 0.4em 0 0;
+  padding: 0 0 0 0.8em;
+  border-left: 4px solid var(--line);
+  color: var(--muted);
+  font-size: 0.68em;
+}
+
+section blockquote::before,
+section blockquote::after {
+  content: none;
+}
+
 /* ---------- 表 ---------- */
 
 section table {
